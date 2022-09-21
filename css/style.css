@@ -11,7 +11,7 @@ html{
    }
    /*HEADER*/
    .wrapper{
-    width: 1370px;
+    max-width: 1370px;
     margin: 0 auto;
    }
    .g_header{
@@ -21,6 +21,7 @@ html{
     width: 100%;
     background-color: #fff;
    }
+   
    .header{
     display: flex;
     justify-content: space-between;
@@ -28,8 +29,29 @@ html{
     padding:20px 0;
     align-items: center;
    }
+   .menu_list{
+    display: flex;
+   }
    .list{
     display:flex ;
+   }
+   .list a{
+    position: relative;
+   }
+   .list a::after{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #01996D;
+    transition:width 0.3s ease-out;
+    
+   }
+   .list a:hover::after , .list a:focus::after{
+    width: 100%;
    }
    .list li{
     margin-right: 72px;
@@ -84,8 +106,8 @@ html{
     .section{
     background: url(../img/BG.png) no-repeat center  ;
     background-size: cover;
-    width: 100%;
-    height: 100vh; 
+    width: 100%; 
+    height:100vh;
     padding-top: 98px;
     margin-bottom: 100px;
     
@@ -331,6 +353,9 @@ html{
 .ftl:hover{
     color: rgb(186, 183, 183);
 }
+
+
+  
 
 
 
